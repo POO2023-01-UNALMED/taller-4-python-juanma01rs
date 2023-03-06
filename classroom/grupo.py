@@ -30,6 +30,11 @@ class Grupo:
     def __str__(self):
         cadena = "Grupo de estudiantes: " + self._grupo
         return cadena 
+    
+    def __str__(self):
+        for i in self._asignaturas:
+            cadena2 = self._asignaturas[i]
+        return cadena2    
         
     @ classmethod
     def asignarNombre(cls, nombre="Grado 6"):
