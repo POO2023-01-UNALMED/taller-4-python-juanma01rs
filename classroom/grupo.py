@@ -11,7 +11,7 @@ class Grupo:
     def listadoAsignaturas(self, lista2=None, **kwargs):
         if lista2 == None:
             lista2 = []
-            for key in kwargs():
+            for key in kwargs:
                 lista2.append(kwargs[key])
         if self._asignaturas == None:
             self._asignaturas = lista2
