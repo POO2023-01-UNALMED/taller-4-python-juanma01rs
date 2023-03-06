@@ -31,12 +31,6 @@ class Grupo:
         cadena = "Grupo de estudiantes: " + self._grupo
         return cadena 
     
-    def __str__(self):
-        for i in self._asignaturas:
-            lista2 = []
-            cadena2= lista2.append(self._asignaturas[i])
-        return lista2    
-        
     @ classmethod
     def asignarNombre(cls, nombre="Grado 6"):
         cls.grado = nombre
