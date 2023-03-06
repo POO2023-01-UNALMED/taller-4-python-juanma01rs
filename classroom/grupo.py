@@ -13,7 +13,7 @@ class Grupo:
     def listadoAsignaturas(self, **kwargs):
         for key in kwargs:
             if key not in self._asignaturas:
-                self._asignaturas.append(kwargs[key])
+                self.asignaturas.append(kwargs[key])
 
     def agregarAlumno(self, alumno, lista=None):
         if lista == None:
