@@ -9,15 +9,18 @@ class Grupo:
         self.listadoAlumnos = estudiantes
 
     def listadoAsignaturas(self, **kwargs):
-        for key in kwargs:
+        for key in kwargs.values():
             if key not in self._asignaturas:
-                self._asignaturas.append(kwargs[key])
+                self._asignaturas.append(Asignatura[key])
 
     def agregarAlumno(self, alumno, lista=None):
         if lista == None:
             lista = []
         lista.append(alumno)
-        self.listadoAlumnos = self.listadoAlumnos + lista
+        if self.listadoAlumnos == None:
+            self.listadoAlumnos = lista
+        else:
+            self.listadoAlumnos = self.listadoAlumnos + lista
 
     # def __str__(self):
     #     pass
